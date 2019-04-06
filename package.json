@@ -1,0 +1,26 @@
+{
+  "name": "personalblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tumi135/PersonalBlog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tumi135/PersonalBlog/issues"
+  },
+  "homepage": "https://github.com/tumi135/PersonalBlog#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "svg-captcha": "^1.3.12"
+  }
+}

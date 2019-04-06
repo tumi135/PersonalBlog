@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a class="title" href="/index.html">我的个人博客&nbsp;|&nbsp;技术博客</a>
+        <ul class="menu">
+            <li><a href="/index.html">首页</a></li>
+            <li><a href="/sitemap.html">地图</a></li>
+            <li><a href="/about.html">关于</a></li>
+            <li><a href="/guestbook.html">留言</a></li>
+            <li><a href="/edit.html">编辑</a></li>
+        </ul>
+        <div class="search_bar" id="search_bar">
+            <input size="10" type="text" placeholder="输入关键字查找" v-model="searchValue" v-on:blur="searchBlur">
+            <button v-on:click="clickButton">搜索</button>
+            <div v-show="searchValue != '' && searchValue != null">
+                <ul>
+                    <li v-for="searcher in searchList"><a v-bind:href="searcher.link">{{searcher.title}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="login" id="login">
+        <span>登录</span>
+        <input id="user" placeholder="用户名" v-model="user">
+        <input type="password" id="password" placeholder="密码" v-model="password">
+        <div>
+            <input type="text" placeholder="验证码" id="login_code" v-model="code">
+            <span v-html="vcode" v-on:click="changeCode"></span>
+        </div>
+        <button v-on:click="sentUserIfo">登录</button>
+</div>
+<footer class="footer">
+    <ul>
+        <li>
+            <a href="/">javacript</a>
+        </li>
+        <li>
+            <a href="/">CSS/DIV</a>
+        </li>
+        <li>
+            <a href="/">分享经验</a>
+        </li>
+        <li>
+            <a href="/">听听音乐</a>
+        </li>
+        <li>
+            <a href="/">Vue</a>
+        </li>
+        <li>
+            <a href="/">MySQL</a>
+        </li>
+        <li>
+            <a href="/">NodeJs</a>
+        </li>
+        <li>
+            <a href="/">新闻资讯</a>
+        </li>
+        <li>
+            <a href="/">编程基础</a>
+        </li>
+    </ul>
+    <p>Copyright © 2010-2017 <a href="/">我的个人博客</a></p>
+</footer>
+<script src="js/base.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

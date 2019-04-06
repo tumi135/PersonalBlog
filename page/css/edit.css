@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.edit_wrapper{
+    margin: 50px auto;
+    width: 300px;
+
+}
+a{
+    display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 32px;
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: 600;
+}
+a:hover{
+    color: #9c29dd;
+}
